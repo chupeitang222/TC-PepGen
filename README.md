@@ -96,7 +96,5 @@ Common settings:
 ## Notes
 
 - Only `topk` and `target_length_mode` are supported
-- `target_length_mode` keeps `X` in generated sequences
-- BOS is not counted toward the target length
 - Generated CSV files are written to `outputs/`
-- `scripts/` includes Bash wrappers for the main inference workflows
+
