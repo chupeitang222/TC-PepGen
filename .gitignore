@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc.*
+*$py.class
+*.so
+.Python
+.mypy_cache/
+.ruff_cache/
+.nox/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs and outputs
+logs/
+outputs/
+checkpoints/
+saved_models/
+wandb/
+*.log
+
+# Model artifacts
+*.pth
+*.bin
+*.pt
+*.ckpt
+*.safetensors
+
+# Data caches
+data/raw/
+data/processed/
+tmp/
+temp/
+*.tmp
+
+# Test and coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/

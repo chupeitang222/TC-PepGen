@@ -1,0 +1,52 @@
+project:
+  name: "TC-PepGen"
+  root: "."
+  data_dir: "./data"
+  weights_dir: "./data/weights"
+  batch_data_dir: "./data/batch_inputs"
+  checkpoint_dir: "./checkpoints"
+  output_dir: "./outputs"
+
+model:
+  encoder_model_name: "esmc_300m"
+  decoder_model_id: "nferruz/ProtGPT2"
+  decoder_local_dir: "./data/ProtGPT2"
+  esm_tokenizer_max_length: 1024
+  encoder_max_length: 500
+  decoder_max_length: 50
+
+data:
+  input_column: "input_sequence"
+  target_column: "target_sequence"
+  batch_input_column: "protein_sequence"
+  batch_target_column: "binder_sequence"
+
+generation:
+  num_beams: 4
+  max_new_tokens: 20
+  min_new_tokens: 2
+  no_repeat_ngram_size: 2
+  length_penalty: 0.5
+  temperature: 1.0
+  top_p: 1.0
+  top_k: 20
+  repetition_penalty: 1.2
+  eos_bias: 40.0
+
+length_search:
+  min: 3
+  max: 50
+  step: 1
+
+device:
+  device: "cuda:0"
+  use_fp16: false
+
+paths:
+  model_search_paths: ["~", ".", "./data/weights"]
+
+tokens:
+  pad_token: "<pad>"
+  eos_token: "<eos>"
+  bos_token: "<bos>"
+  ensure_distinct_special_tokens: true
