@@ -20,8 +20,6 @@ It provides two inference modes:
 
 Recommended Python version: `3.12`.
 
-`Python 3.14` is not recommended because the environment definition targets Python 3.12.
-
 Create the Conda environment from the repository root:
 
 ```bash
@@ -33,17 +31,6 @@ Available entry points:
 
 - `python scripts/inference.py`
 - `python scripts/batch_inference.py`
-
-## Model Weights
-
-This repository does not include model weights.
-
-Place your exported Hugging Face-style model directory under one of these paths, or override `CHECKPOINT_PATH` / `--model_path`:
-
-- `checkpoints/final`
-- `checkpoints/best`
-- `checkpoints/mix/final`
-- `checkpoints/mix/best`
 
 ## Quick Run
 
