@@ -87,6 +87,7 @@ def main() -> None:
             }
         )
 
+    Path(args.output_csv).parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(results).to_csv(args.output_csv, index=False)
     print(f"Saved results to: {args.output_csv}")
 
